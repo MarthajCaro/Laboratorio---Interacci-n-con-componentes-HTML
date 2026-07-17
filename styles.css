@@ -1,54 +1,121 @@
 :root {
-    --negro: #afa346;
-    --dorado: #d4af37;
-    --blanco: #ffffff;
-    --gris: #151414;
+    --color-primario: #1e3a5f;      
+    --color-secundario: #4da8da;    
+    --color-fondo: #c9bef100;        
+    --color-blanco: #b6c7ee;
+    --color-texto: #1a1a1a;
+    --color-linea: #dddddd;
+    --color-sombra: rgba(0,0,0,0.2);
 }
+
 
 body {
-    background-color: var(--negro);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 header {
-    background-color: #db0303;
-    border: 2px solid var(--dorado);
-    border-radius: 15px;
-
-    width: 300px;
+    width: 100%;
+    padding: 15px;
     text-align: center;
-
-    padding: 20px;   /* espacio interno */
-    margin: 10px;    /* espacio externo */
-
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-
 }
 
-img {
-    width: 100px;
-    border-radius: 50%;
-    border: 3px solid var(--dorado);
+header h2 {
+    margin: 0;
+    color: var(--color-primario);
+}
+
+/* tarjeta */
+
+.card {
+    width: 550px;
+    background: var(--color-blanco);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px var(--color-sombra);
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* barra de empresa */
+.empresa {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 10px;
+}
+
+.empresa h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.empresa p {
+    margin: 0;
+    font-size: 12px;
+}
+
+/* contenido */
+.credencial {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.lado-izq {
+    text-align: center;
+}
+
+.avatar {
+    width: 110px;
+    border-radius: 10px;
     margin-bottom: 10px;
 }
 
-h1 {
-    color: var(--dorado);
+.lado-izq h3 {
     margin: 5px 0;
+    color: var(--color-texto);
 }
 
-h2 {
-    color: var(--gris);
-    font-size: 16px;
-    margin-bottom: 15px;
+
+.lado-der {
+    flex: 1;
 }
 
-p {
-    color: var(--blanco);
-    margin: 5px 0;
+.lado-der p {
+    margin: 6px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--color-linea);
+    color: var(--color-texto);
+}
+
+
+footer {
+    margin-top: 15px;
+    font-style: italic;
+    color: #555;
+}
+
+.footer-card {
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    font-style: italic;
+    position: relative;
+}
+
+.footer-card::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--color-secundario);
+    margin: 0 auto 5px;
 }
