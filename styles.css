@@ -1,11 +1,10 @@
 :root {
     --color-primario: #1e3a5f;      
     --color-secundario: #4da8da;    
-    --color-fondo: #c9bef100;        
-    --color-blanco: #b6c7ee;
+    --color-fondo: #e9ecf5;        
+    --color-blanco: #cfd8e3;
     --color-texto: #1a1a1a;
     --color-linea: #dddddd;
-    --color-sombra: rgba(0,0,0,0.2);
 }
 
 
@@ -37,7 +36,6 @@ header h2 {
     width: 550px;
     background: var(--color-blanco);
     border-radius: 15px;
-    box-shadow: 0 10px 25px var(--color-sombra);
     overflow: hidden;
     margin-top: 20px;
 }
